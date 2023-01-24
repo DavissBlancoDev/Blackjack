@@ -1,31 +1,31 @@
 import random
 
-# cards values
+# Valores de las cartas
 cartas = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':10, 'Q':10, 'K':10, 'A':11}
 
-# Display the rules of the game
+# Función que muestra las reglas del juego
 def mostrarReglas():
     print("============================================================================================")
     print("Bienvenido al Blackjack!")
-    print("El objetivo del juego es conseguir superar la mano del Dealer sin pasarse de 21.")
+    print("El objetivo del juego es conseguir superar la mano del crupier sin pasarse de 21.")
     print("Los ases valen 11 puntos, las letras valen 10 puntos y el resto de cartas mantiene su valor.")
     print("Si superas los 21 puntos pierdes el juego")
     print("============================================================================================")
 
-# Function to calculate the total value of a hand
+# Funcion que calcula el valor total de una mano
 def total(mano):
     total = 0
     ases = 0
-    for card in mano:
-        total += cartas[card]
-        if card == 'A':
+    for carta in mano:
+        total += cartas[carta]
+        if carta == 'A':
             ases += 1
     while total > 21 and ases > 0:
         total -= 10
         ases -= 1
     return total
 
-# Function to play the game
+# Funcion para jugar al juego
 def juego():
     mano_jugador = []
     mano_crupier = []
