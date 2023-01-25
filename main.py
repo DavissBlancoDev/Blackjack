@@ -5,12 +5,12 @@ cartas = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':1
 
 # Función que muestra las reglas del juego
 def mostrarReglas():
-    print("============================================================================================")
+    print("======================================================================================================")
     print("Bienvenido al Blackjack!")
     print("El objetivo del juego es conseguir superar la mano del crupier sin pasarse de 21.")
-    print("Los ases valen 11 puntos, las letras valen 10 puntos y el resto de cartas mantiene su valor.")
+    print("Los ases valen 11 puntos o 1 punto, las letras valen 10 puntos y el resto de cartas mantiene su valor.")
     print("Si superas los 21 puntos pierdes el juego")
-    print("============================================================================================")
+    print("======================================================================================================")
 
 # Funcion que calcula el valor total de una mano
 def total(mano):
@@ -62,7 +62,7 @@ def juego():
                 print("La mano del crupier: " + ' '.join(mano_crupier) + " | TOTAL: " + str(total(mano_crupier)))
             if total(mano_crupier) > 21:
                 print("El crupier se ha pasado, eres el ganador!")
-                print("========================================")
+                print("=========================================")
             elif total(mano_jugador) > total(mano_crupier):
                 print("Has ganado!")
                 print("===========")
